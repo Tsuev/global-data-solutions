@@ -5,7 +5,7 @@ export default {
     },
     mutations: {
       ADD_TASK(state, text){
-        state.tasks.push({id: Symbol(), task: text, success: false})
+        state.tasks.push({id: state.tasks.length, task: text, success: false})
         localStorage.setItem('tasks', JSON.stringify(state.tasks))
       },
       CHANGE_FILTER(state, value){

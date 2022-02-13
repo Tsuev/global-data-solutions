@@ -9,7 +9,7 @@
 export default {
   props: {
     cardId: {
-      type: Symbol,
+      type: Number,
     },
     isActive: {
       type: Boolean,
