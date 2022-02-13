@@ -1,3 +1,5 @@
+import uniqueIdgenerate from "../../plugins/uniqueIdgenerate";
+
 export default {
     state: {
       tasks: [],
@@ -5,7 +7,7 @@ export default {
     },
     mutations: {
       ADD_TASK(state, text){
-        state.tasks.push({id: state.tasks.length, task: text, success: false})
+        state.tasks.push({id: uniqueIdgenerate(state.tasks), task: text, success: false})
         localStorage.setItem('tasks', JSON.stringify(state.tasks))
       },
       CHANGE_FILTER(state, value){
